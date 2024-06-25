@@ -1,0 +1,29 @@
+//色
+$grey: rgb(128,128,128);
+$red: rgb(184, 0, 0);
+$blue: rgb(72, 72, 255);
+$yellow: rgb(191, 191, 45);
+$violet: rgb(107, 53, 253);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+//輝度測る用
+.sample {
+    height: 100vh;
+    background-color: $red;
+}

@@ -1,0 +1,79 @@
+.comparision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1vh;
+    background-color: $grey;
+    // background-color: white;
+
+    > section {
+        display: flex;
+        justify-content: center;
+        column-gap: 5vh;
+    }
+
+    .check {
+        background-color: $grey;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 10vh;
+    }
+    
+    aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 0.5vh;
+        // height: 19vh;
+        width: 5vh;
+        // border: 1px solid red;
+
+        //文字色
+        color: $red;
+    }
+
+    span {
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        width: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 240px;
+        display: none;
+    }
+    
+    aside > section {
+        display: flex;
+        column-gap: 0.3vh;
+    }
+    
+    h3 {
+        font-size: 80px;
+    }
+    
+    section > h3 {
+        font-size: 80px;
+    }
+    
+    .blue {
+        color: $blue;
+    }
+
+    .yellow {
+        color: $yellow;
+    }
+
+    .violet {
+        color: $violet;
+    }
+    
+    .slash > span {
+        display: flex;
+    }
+}
