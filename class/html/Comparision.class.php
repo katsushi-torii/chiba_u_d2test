@@ -21,42 +21,56 @@
             return $htmlHead;
         }
 
-        static function comparisionList(){
+        static function comparisionList(array $comparisionColors){
             $htmlList = '
             <main class="comparision">';
-            for($i = 0; $i <= 10; $i++){
-                $htmlList .= self::comparisionRow();
+            $first = true;
+            foreach($comparisionColors as $comparisionColor){
+                if($first){
+                    $htmlList .= self::comparisionRow($comparisionColor, true);
+                }else{
+                    $htmlList .= self::comparisionRow($comparisionColor, false);
+                }
+                $first = false;
             }
-            $htmlList .= '</main>';
+            foreach($comparisionColors as $comparisionColor){
+                $htmlList .= self::comparisionRow($comparisionColor, false);
+            }
+            $htmlList .= 
+                '<section>
+                    <button onclick="finish()" class="finishButton">終了</button>
+                    <form action="comparisionResult.php" method="POST" hidden>
+                        <input type="hidden" name="result" id="result">
+                    </form>
+                </section>
+            </main>';
             return $htmlList;
         }
 
-        static function comparisionRow(){
-            $htmlRow = '
-            <section>
-                <button class="check color1">
+        static function comparisionRow($comparisionColor, $first){
+            if($first){
+                $htmlRow = '<section class="'.$comparisionColor->id.' first">';
+            }else{
+                $htmlRow = '<section class="'.$comparisionColor->id.'">';
+            }
+            $htmlRow .= '
+                <button class="check color1 '.$comparisionColor->colorA.'">
                     <aside>
-                        <section>
-                            <h3>|</h3> <h3>|</h3>
-                        </section>
-                        <h3>d</h3>
-                        <section>
-                            <h3>|</h3> <h3>|</h3>
-                        </section>
+                        <h3>|</h3> <h3>|</h3>
                     </aside>
-                    <span>/</span>
+                    <h3>d</h3>
+                    <aside>
+                        <h3>|</h3> <h3>|</h3>
+                    </aside>
                 </button>
-                <button class="check color2">
+                <button class="check color2 '.$comparisionColor->colorB.'">
                     <aside>
-                        <section>
-                            <h3>|</h3> <h3>|</h3>
-                        </section>
-                        <h3>d</h3>
-                        <section>
-                            <h3>|</h3> <h3>|</h3>
-                        </section>
+                        <h3>|</h3> <h3>|</h3>
                     </aside>
-                    <span>/</span>
+                    <h3>d</h3>
+                    <aside>
+                        <h3>|</h3> <h3>|</h3>
+                    </aside>
                 </button>
             </section>
             ';

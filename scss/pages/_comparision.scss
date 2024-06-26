@@ -1,54 +1,35 @@
 .comparision {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    row-gap: 1vh;
+    justify-content: center;
+    height: 90vh;
     background-color: $grey;
-    // background-color: white;
 
     > section {
         display: flex;
         justify-content: center;
         column-gap: 5vh;
+        
+        //一旦全部隠してdisplayクラスを持っているものだけ呈示するため
+        display: none;
     }
 
-    .check {
+    button {
         background-color: $grey;
         border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        width: 10vh;
-    }
-    
-    aside {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        row-gap: 0.5vh;
-        // height: 19vh;
-        width: 5vh;
-        // border: 1px solid red;
-
-        //文字色
         color: $red;
     }
 
-    span {
-        position: absolute;
-        z-index: 1;
-        text-align: center;
-        width: 5vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 240px;
-        display: none;
+    .finishButton {
+        color: black;
+        font-size: 100px;
     }
     
-    aside > section {
+    aside {
         display: flex;
         column-gap: 0.3vh;
     }
@@ -72,8 +53,8 @@
     .violet {
         color: $violet;
     }
-    
-    .slash > span {
+
+    .display {
         display: flex;
     }
 }
