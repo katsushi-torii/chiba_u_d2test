@@ -40,7 +40,9 @@
                 '<section>
                     <button onclick="finish()" class="finishButton">終了</button>
                     <form action="comparisionResult.php" method="POST" hidden>
-                        <input type="hidden" name="result" id="result">
+                        <input type="hidden" name="ids" id="ids">
+                        <input type="hidden" name="results" id="results">
+                        <input type="hidden" name="numbers" id="numbers">
                     </form>
                 </section>
             </main>';
@@ -54,7 +56,7 @@
                 $htmlRow = '<section class="'.$comparisionColor->id.'">';
             }
             $htmlRow .= '
-                <button class="check color1 '.$comparisionColor->colorA.'">
+                <button class="check countA '.$comparisionColor->colorA.'">
                     <aside>
                         <h3>|</h3> <h3>|</h3>
                     </aside>
@@ -63,7 +65,7 @@
                         <h3>|</h3> <h3>|</h3>
                     </aside>
                 </button>
-                <button class="check color2 '.$comparisionColor->colorB.'">
+                <button class="check countB '.$comparisionColor->colorB.'">
                     <aside>
                         <h3>|</h3> <h3>|</h3>
                     </aside>

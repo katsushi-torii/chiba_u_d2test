@@ -3,7 +3,7 @@
 require_once("../../Config.inc.php");
 require_once("../../class/object/ComparisionColors.class.php");
 require_once("../../PDOAgent.class.php");
-require_once("../../DAO/SelectComparisionDAO.class.php.php");
+require_once("../../DAO/SelectComparisionDAO.class.php");
 require_once("../../class/converter/ComparisionColorConverter.class.php");
 require_once("../../class/html/Header.class.php");
 require_once("../../class/html/Comparision.class.php");

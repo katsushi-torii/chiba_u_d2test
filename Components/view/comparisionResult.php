@@ -1,5 +1,23 @@
 <?php
 
+require_once("../../Config.Inc.php");
+require_once("../../class/object/ComparisionColors.class.php");
+require_once("../../PDOAgent.class.php");
+require_once("../../DAO/FunctionComparisionDAO.class.php");
+
+FunctionComparisionDAO::startDb();
+
 if(!empty($_POST)){
-    var_dump($_POST['result']);
+    $ids = $_POST['ids'];
+    $selectedColors = $_POST['results'];
+    $selectedNumbers = $_POST['numbers'];
+    $idArray = explode(",", $ids);
+    $selectedColorsArray = explode(",", $selectedColors);
+    $selectedNumbersArray = explode(",", $selectedNumbers);
+    for($i = 0; $i < 24; $i++){
+        echo "id = {$idArray[$i]}, color={$selectedColorsArray[$i]} <br>";
+        // FunctionComparisionDAO::updateComparisionColors($idArray[$i], $selectedNumbersArray[$i]);
+    };
 }
+
+echo "<a href='d2test.php'>d2</a>";

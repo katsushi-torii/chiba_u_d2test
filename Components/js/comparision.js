@@ -1,5 +1,7 @@
 $('.first').addClass('display');
+let idsArray = [];
 let selectedColorsArray = [];
+let selectedNumbersArray = [];
 $('.check').click((e)=>{
     let sectionClassName = e.target.closest("button").parentNode.className;
     let buttonClassName = e.target.closest("button").className;
@@ -8,17 +10,19 @@ $('.check').click((e)=>{
         id = sectionClassName[0] + sectionClassName[1];
     }
     let selectedColor = buttonClassName.split(" ")[2];
-    // let array = {id: id, selectedColor: selectedColor};
-    let array = [id, selectedColor];
-    selectedColorsArray.push(array);
-    console.log(selectedColorsArray);
+    let selectedNumber = buttonClassName.split(" ")[1];
+    console.log(selectedNumber);
+    idsArray.push(id);
+    selectedColorsArray.push(selectedColor);
+    selectedNumbersArray.push(selectedNumber);
 
     $('.display').next().addClass('display');
     $('.display').eq(0).removeClass('display');
 })
 
 function finish(){
-    $('#result').val(selectedColorsArray);
-    console.log($('#result').val());
+    $('#ids').val(idsArray);
+    $('#results').val(selectedColorsArray);
+    $('#numbers').val(selectedNumbersArray);
     $('form').submit();
 }
