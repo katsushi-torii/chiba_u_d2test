@@ -4,6 +4,9 @@ require_once("../../Config.Inc.php");
 require_once("../../class/object/ComparisionColors.class.php");
 require_once("../../PDOAgent.class.php");
 require_once("../../DAO/FunctionComparisionDAO.class.php");
+require_once("../../class/html/Header.class.php");
+
+echo Header::header();
 
 FunctionComparisionDAO::startDb();
 
