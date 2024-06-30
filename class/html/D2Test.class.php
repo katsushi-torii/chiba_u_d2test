@@ -23,10 +23,16 @@
         static function d2List(){
             $d2List = '
             <main class="d2">
-                <button class="finish">
+                <button class="finish" onclick="finish()">
                     Finish
-                </button>';
-            for($i = 0; $i < 10; $i++){
+                </button>
+                <form action="comparisionResult.php" method="POST" hidden>
+                        <input type="hidden" name="colors" id="colors">
+                        <input type="hidden" name="results" id="results">
+                        <input type="hidden" name="numbers" id="numbers">
+                </form>';
+            //列の数調整
+            for($i = 0; $i < 30; $i++){
                 $d2List .= self::d2Row($i);
             }
             $d2List .= '</main>';
@@ -45,7 +51,7 @@
         static function d2Button($j){
             $d2Button = '
             <button class="check">
-                <aside>
+                <aside class="alphabetD">
                     <section>
                         <h3>|</h3> <h3>|</h3>
                     </section>

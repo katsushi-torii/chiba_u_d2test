@@ -4,7 +4,7 @@
     align-items: center;
     padding-top: 5vh;
     row-gap: 1vh;
-    background-color: rgb(128, 128, 128);
+    background-color: $grey;
 
     > section {
         display: flex;
@@ -13,7 +13,7 @@
     }
 
     .check {
-        background-color: grey;
+        background-color: $grey;
         border: none;
         display: flex;
         align-items: center;
@@ -31,19 +31,19 @@
         width: 5vh;
 
         //文字色
-        color: rgb(184, 0, 0);
+        color: $red;
     }
 
     .blue {
-        color: rgb(72, 72, 255);
+        color: $blue;
     }
 
     .yellow {
-        color: rgb(191, 191, 45);
+        color: $yellow;
     }
 
     .violet {
-        color: rgb(107, 53, 253);
+        color: $violet;
     }
 
     span {

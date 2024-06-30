@@ -1,5 +1,7 @@
 //色
-$grey: rgb(128,128,128);
+// $grey: rgb(128,128,128);
+$grey: rgb(48,48,48);
+// $grey: white;
 
 //コントラスト比2:1で統一
 // $red: rgb(184, 0, 0);
@@ -29,6 +31,13 @@ $red: rgb(211, 11, 11);
 $blue: rgb(132, 132, 255);
 $yellow: rgb(179, 179, 25);
 $violet: rgb(184, 15, 249);
+// $violet: rgb(128, 128, 128);
+
+//輝度７で統一
+// $red: rgb(225, 31, 31);
+// $blue: rgb(107, 107, 255);
+// $yellow: rgb(123, 123, 47);
+// $violet: rgb(138, 108, 184);
 
 //輝度差2.2で統一
 // $red: rgb(211, 11, 11);
@@ -57,9 +66,9 @@ li {
 //輝度測る用
 .sample {
     height: 100vh;
-    // background-color: $grey;
-    background-color: rgb(255, 0, 0);
-    // background-color: rgb(179, 22, 22);
-    // background-color: rgb(169, 169, 255);
-    // background-color: rgb(204, 156, 248);
+    // background-color: rgb(47, 47, 47);
+    // background-color: rgb(230, 6, 6);
+    // background-color: rgb(112, 112, 206);
+    // background-color: rgb(123, 123, 47);
+    // background-color: rgb(138, 108, 184);
 }
