@@ -9,7 +9,7 @@
         }
 
         public static function updateComparisionColors($id, $selectedNumber){
-            $sql = "UPDATE `comparision` SET $selectedNumber = $selectedNumber + 2 WHERE `id` = :id";
+            $sql = "UPDATE `comparision` SET $selectedNumber = $selectedNumber + 1 WHERE `id` = :id";
             
             self::$db->query($sql);
             

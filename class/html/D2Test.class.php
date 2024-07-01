@@ -22,20 +22,11 @@
 
         static function d2List(){
             $d2List = '
-            <main class="d2">
-                <button class="finish" onclick="finish()">
-                    Finish
-                </button>
-                <form action="comparisionResult.php" method="POST" hidden>
-                        <input type="hidden" name="colors" id="colors">
-                        <input type="hidden" name="results" id="results">
-                        <input type="hidden" name="numbers" id="numbers">
-                </form>';
+            <main class="d2">';
             //列の数調整
             for($i = 0; $i < 30; $i++){
                 $d2List .= self::d2Row($i);
             }
-            $d2List .= '</main>';
             return $d2List;
         }
 
@@ -51,7 +42,7 @@
         static function d2Button($j){
             $d2Button = '
             <button class="check">
-                <aside class="alphabetD">
+                <aside>
                     <section>
                         <h3>|</h3> <h3>|</h3>
                     </section>
@@ -60,15 +51,33 @@
                         <h3>|</h3> <h3>|</h3>
                     </section>
                 </aside>
-                <span>/</span>
+                <span class="d">/</span>
             </button>';
             return $d2Button;
         }
 
         static function script(){
             $htmlScript = '
+                    <button class="finish" onclick="finish()">Next</button>
+                    <form action="d2.php" method="POST" hidden>
+                            <input type="hidden" name="colors" id="colors">
+                    </form>
+                </main>
             </body>
             <script src="../../Components/js/d2.js" defer></script>
+            </hmtl>';
+            return $htmlScript;
+        }
+
+        static function scriptWhite(){
+            $htmlScript = '
+                    <button class="finish" onclick="finish()">Finish</button>
+                    <form action="d2.php" method="POST" hidden>
+                            <input type="hidden" name="colors" id="colors">
+                    </form>
+                </main>
+            </body>
+            <script src="../../Components/js/d2White.js" defer></script>
             </hmtl>';
             return $htmlScript;
         }

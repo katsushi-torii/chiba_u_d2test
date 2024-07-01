@@ -4,7 +4,7 @@
     align-items: center;
     padding-top: 5vh;
     row-gap: 1vh;
-    background-color: $grey;
+    background-color: $back;
 
     > section {
         display: flex;
@@ -13,7 +13,7 @@
     }
 
     .check {
-        background-color: $grey;
+        background-color: $back;
         border: none;
         display: flex;
         align-items: center;
@@ -31,6 +31,10 @@
         width: 5vh;
 
         //文字色
+        color: $grey;
+    }
+
+    .red {
         color: $red;
     }
 
@@ -38,12 +42,12 @@
         color: $blue;
     }
 
-    .yellow {
-        color: $yellow;
+    .green {
+        color: $green;
     }
 
-    .violet {
-        color: $violet;
+    .yellow {
+        color: $yellow;
     }
 
     span {
@@ -74,5 +78,9 @@
     
     .slash > span {
         display: flex;
+    }
+
+    .finish {
+        font-size: 80px;
     }
 }

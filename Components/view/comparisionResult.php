@@ -17,9 +17,9 @@ if(!empty($_POST)){
     $idArray = explode(",", $ids);
     $selectedColorsArray = explode(",", $selectedColors);
     $selectedNumbersArray = explode(",", $selectedNumbers);
-    for($i = 0; $i < 24; $i++){
+    for($i = 0; $i < 40; $i++){
         echo "id = {$idArray[$i]}, color={$selectedColorsArray[$i]} <br>";
-        // FunctionComparisionDAO::updateComparisionColors($idArray[$i], $selectedNumbersArray[$i]);
+        FunctionComparisionDAO::updateComparisionColors($idArray[$i], $selectedNumbersArray[$i]);
     };
 }
 
