@@ -11,7 +11,7 @@ FunctionD2DAO::startDb();
 if(!empty($_POST)){
     $colors = $_POST['colors'];
     // echo $colors;
-    // FunctionD2DAO::updateColors($colors);
+    FunctionD2DAO::updateColors($colors);
 }
 
 echo D2Test::pageHead();
