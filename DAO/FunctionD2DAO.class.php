@@ -14,7 +14,7 @@
             $sql = "INSERT INTO `d2` VALUES (0, $colors)";
             self::$db->query($sql);
             
-            echo $sql;
+            // echo $sql;
 
             self::$db->execute();
             return self::$db->lastInsertId();

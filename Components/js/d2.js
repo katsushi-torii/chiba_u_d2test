@@ -85,4 +85,4 @@ function finish(){
     $('form').submit();
 }
   
-setTimeout(finish, 180000);
+// setTimeout(finish, 180000);
