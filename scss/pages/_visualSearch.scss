@@ -2,14 +2,39 @@
     background-color: black;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    column-gap: 10vh;
-    >span {
+    > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // row-gap: 5vh;
+        aside {
+            display: flex;
+            justify-content: center;
+            column-gap: 7vh;
+            // border: 1px solid white;
+        }
+    }
+    span {
         font-size: 70px;
-        color: grey;
+        color: $grey;
+        // text-shadow: 1px -1px white;
     }
     .middle {
-        color: rgb(255, 150, 0);
+        color: $red;
+    }
+    > aside {
+        display: flex;
+        align-items: center;
+        column-gap: 1vh;
+        button {
+            height: 5vh;
+            width: 5vh;
+            font-size: 28px;
+            font-weight: 600;
+        }
     }
 }

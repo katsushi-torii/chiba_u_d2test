@@ -41,10 +41,10 @@ def plot_sRGB_to_chromaticity_diagram_CIE1931(sRGB_list):
 
 
 sRGB1 = [255, 0, 0]
-sRGB2 = [0, 127, 0]
-sRGB3 = [0, 0, 1]
-sRGB4 = [1, 1, 0]
-sRGB5 = [0, 1, 1]
-sRGB6 = [1, 0, 1]
+sRGB2 = [255, 50, 50]
+sRGB3 = [255, 30, 30]
+sRGB4 = [255, 50, 0]
+sRGB5 = [255, 80, 0]
+sRGB6 = [255, 0, 50]
 sRGB_list = [sRGB1, sRGB2, sRGB3, sRGB4, sRGB5, sRGB6]
 plot_sRGB_to_chromaticity_diagram_CIE1931(sRGB_list)
